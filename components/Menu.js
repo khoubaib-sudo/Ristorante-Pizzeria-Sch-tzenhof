@@ -185,7 +185,7 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState(Object.keys(categories)[0]);
 
   return (
-    <section className="container  w-full py-16 px-6  bg-[#F5EACF] ">
+    <section id="menu" className=" w-full md:w-auto py-16 px-6  bg-[#F5EACF] ">
       <div className="relative flex justify-center items-center py-10">
   {/* Left Olive Branch */}
   <img

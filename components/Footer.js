@@ -3,7 +3,7 @@
 import React from "react";
 
 const Footer = () => (
-  <footer className="bg-[#6a755c] py-10 px-6">
+  <footer id="contact" className="bg-[#6a755c] py-10 px-6">
     <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8  text-center md:text-left">
       
       {/* Left Section - Opening Hours */}
