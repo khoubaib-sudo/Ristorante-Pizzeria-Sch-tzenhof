@@ -68,7 +68,7 @@ const Navbar = () => {
             onClick={() => handleNavClick("about")}
             className="text-white font-bold hover:text-[#1d7962] transition"
           >
-            About Us
+            Über uns
           </button>
         </li>
       </ul>

@@ -5,6 +5,8 @@
 
 @custom-variant dark (&:is(.dark *));
 <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Italianno&display=swap" rel="stylesheet">
+
 
 @theme inline {
   --color-background: var(--background);
