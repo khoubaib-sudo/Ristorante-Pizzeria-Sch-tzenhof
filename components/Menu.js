@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -180,7 +181,7 @@ const categories = {
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState(Object.keys(categories)[0]);
-
+  const [selectedItem, setSelectedItem] = useState(null); // <-- modal trigger
   return (
     <section id="menu" className=" w-full md:w-auto py-16 px-6  bg-[#F5EACF] ">
       <div className="relative flex justify-center items-center py-10">
@@ -219,7 +220,10 @@ const Menu = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-6 ">
         {categories[activeCategory].map((item, index) => (
-          <Card key={index} className="relative overflow-hidden border-0 h-40 rounded-none ">
+          <Card key={index} 
+          className="relative overflow-hidden border-0 h-40 rounded-none"
+          onClick={() => setSelectedItem(item)} // <-- this triggers the modal
+          >
           {/* Full Image Background */}
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -249,6 +253,49 @@ const Menu = () => {
         
         ))}
       </div>
+      {/* Image Modal */}
+      <AnimatePresence>
+        {selectedItem && (
+          <motion.div
+          className="fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setSelectedItem(null)}
+        >
+        
+        <motion.div
+  className="bg-white rounded-lg overflow-hidden shadow-xl max-w-md w-full relative"
+  initial={{ scale: 0.5 }}
+  animate={{ scale: 1 }}
+  exit={{ scale: 0.5 }}
+  onClick={(e) => e.stopPropagation()}
+>
+  <div className="relative">
+    <img
+      src={selectedItem.image}
+      alt={selectedItem.name}
+      className="w-full h-auto object-cover"
+    />
+
+    {/* Gradient overlay like in menu cards */}
+    <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#4F583D] to-transparent pointer-events-none" />
+    
+    <div className="absolute bottom-0 inset-x-0 p-4 text-white">
+      <h2 className="text-2xl font-bold">{selectedItem.name}</h2>
+      <p className="text-md">{selectedItem.price}</p>
+      {selectedItem.allergen && (
+        <p className="text-sm font-semibold">{selectedItem.allergen}</p>
+      )}
+    </div>
+  </div>
+
+  
+</motion.div>
+
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="flex flex-wrap justify-center gap-1 my-2"></div>
       <h2 className="text-4xl font-bold mx-6 font-[Italianno]">
     Zusatzstoffe & Allergene
