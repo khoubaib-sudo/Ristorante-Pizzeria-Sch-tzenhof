@@ -79,7 +79,7 @@ const Navbar = () => {
           onClick={() => handleNavClick("contact")}
           className="bg-[#4F583D] hover:bg-green-900 rounded-full text-white flex items-center"
         >
-          Contact us <ArrowRightIcon className="w-5 h-5 text-white ml-2" />
+          Kontaktieren Sie uns <ArrowRightIcon className="w-5 h-5 text-white ml-2" />
         </Button>
       </div>
 
@@ -104,7 +104,7 @@ const Navbar = () => {
             onClick={() => handleNavClick("contact")}
             className="bg-[#4F583D] hover:bg-green-900 rounded-full text-white mt-2"
           >
-            Contact us
+            Kontaktieren Sie uns
           </Button>
         </div>
       )}
