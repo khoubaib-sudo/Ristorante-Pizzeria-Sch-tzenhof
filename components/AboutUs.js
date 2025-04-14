@@ -10,14 +10,14 @@ const AboutUs = () => (
     <img
       src="/left side.png"
       alt="Illustration Links"
-      className="hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 w-24 sm:w-40 md:w-52 opacity-80"
+      className="hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 w-28 sm:w-42 md:w-54 opacity-80"
     />
 
     {/* Right Illustration */}
     <img
       src="/right side.png"
       alt="Illustration Rechts"
-      className="hidden sm:block absolute right-0 top-1/2 transform -translate-y-1/2 w-24 sm:w-40 md:w-52 opacity-80"
+      className="hidden sm:block absolute right-0 top-1/2 transform -translate-y-1/2 w-24 sm:w-40 md:w-51 opacity-80"
     />
 
     {/* Section Content */}
