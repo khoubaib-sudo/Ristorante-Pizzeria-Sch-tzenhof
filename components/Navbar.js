@@ -75,12 +75,12 @@ const Navbar = () => {
 
       {/* Contact Button (Desktop) */}
       <div className="hidden md:block">
-        <Button
-          onClick={() => handleNavClick("contact")}
-          className="bg-[#4F583D] hover:bg-green-900 rounded-full text-white flex items-center"
-        >
-          Kontaktieren Sie uns <ArrowRightIcon className="w-5 h-5 text-white ml-2" />
-        </Button>
+      <a
+  href="tel:+4961679399988"
+  className="bg-[#4F583D] hover:bg-green-900 rounded-full text-white flex items-center px-4 py-2 font-medium"
+>
+  Reservierung nur telefonisch <ArrowRightIcon className="w-5 h-5 text-white ml-2" />
+</a>
       </div>
 
       {/* Mobile Menu Button */}
@@ -100,12 +100,12 @@ const Navbar = () => {
           <button onClick={() => handleNavClick("about")} className="text-lg font-semibold">
             About Us
           </button>
-          <Button
-            onClick={() => handleNavClick("contact")}
-            className="bg-[#4F583D] hover:bg-green-900 rounded-full text-white mt-2"
-          >
-            Kontaktieren Sie uns
-          </Button>
+          <a
+  href="tel:+4961679399988"
+  className="bg-[#4F583D] hover:bg-green-900 rounded-full text-white mt-2 px-4 py-2 text-center font-medium"
+>
+  Reservierung nur telefonisch
+</a>
         </div>
       )}
     </nav>

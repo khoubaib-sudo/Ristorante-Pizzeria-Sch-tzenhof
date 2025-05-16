@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const images = [
-  "/hero-bg1.jpg",
-  "/hero-bg2.jpg",
-  "/hero-bg3.jpg",
-  "/hero-bg4.jpg",
+  "/hero-bg1.png",
+  "/hero-bg2.png",
+  "/hero-bg3.png",
+  "/hero-bg4.png",
 ];
 
 const HeroSection = () => {
@@ -48,6 +48,7 @@ const HeroSection = () => {
         <p className="text-white font-bold text-base sm:text-lg md:text-xl mt-4 drop-shadow-lg">
           Seit 2010 servieren wir authentische deutsche und italienische Gerichte.
         </p>
+        
 
         <div className="mt-6 sm:mt-8">
           <Image
@@ -58,6 +59,7 @@ const HeroSection = () => {
             className="mx-auto w-24 sm:w-32 md:w-40 lg:w-48 h-auto"
           />
         </div>
+        
       </header>
     </section>
   );

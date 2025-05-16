@@ -19,6 +19,9 @@ const Footer = () => (
 
       {/* Center Section - Main Text */}
       <div className="text-center text-white">
+      <p className="text-amber-100 italic font-bold text-l 4xl:text-base 4xl:text-lg mt-2 drop-shadow-lg">
+  Reservierungen sind nur telefonisch möglich: <a href="tel:+4961679399988" className="underline text-l hover:text-yellow-400">+49 (0) 6167-9399988</a>
+</p>
         <h2 className="text-2xl italic font-semibold text-white">Hunger?</h2>
       
         <p className="mt-2">Alt Allertshofen 58, <br /> 64397 Modautal-Allertshofen</p>
@@ -32,7 +35,6 @@ const Footer = () => (
           className="w-20 h-20 mb-2 rounded-md"
         />
         <p>Tel.: +49 (0) 6167-9399988</p>
-        <p>info@ristorante-schuetzenhof.de</p>
       </div>
 
     </div>
