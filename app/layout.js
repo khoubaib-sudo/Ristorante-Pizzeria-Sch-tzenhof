@@ -50,7 +50,7 @@ openGraph: {
   title: "Ristorante Pizzeria Schützenhof | Authentische italienische Küche",
   description:
     "Erleben Sie den Geschmack Italiens im Ristorante Pizzeria Schützenhof – mit hausgemachter Pasta, Holzofenpizza und erlesenen Weinen. Perfekt für Familienessen, romantische Abende und besondere Anlässe.",
-  url: "https://www.ristorantepizzeriaschtzenhof.de", 
+  url: "https://ristorantepizzeriaschtzenhof.de", 
   siteName: "Ristorante Pizzeria Schützenhof",
   images: [
     {
